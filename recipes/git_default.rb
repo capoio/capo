@@ -1,7 +1,7 @@
 configs do
   description 'Default Git settings'
   version 0.2
-  tags %w[git]
+  tags %w[git scm]
   category 'defaults'
   dependencies %w[]
 end
