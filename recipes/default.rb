@@ -10,7 +10,7 @@ end
 set :user, 'account_user'
 
 #Set the application name on the server
-set :application 'application_name'
+set :application, 'application_name'
 
 # Set the name of your branch
 set :branch, :master
