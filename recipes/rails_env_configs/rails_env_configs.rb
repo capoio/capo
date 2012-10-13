@@ -2,7 +2,9 @@ unless exists?(:configs)
   set :configs, [:database]
 end
 
-configs.each do |name|
+# The configs variable isn't used yet. We should fix that.
+
+[:database].each do |name|
   namespace :configs do
     namespace name do
       desc "Create #{name}.yml in shared/config"
