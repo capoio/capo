@@ -1,3 +1,5 @@
+load 'deploy/assets'
+
 namespace :deploy do
   namespace :assets do
     task :precompile, :roles => :web, :except => {:no_release => true} do
