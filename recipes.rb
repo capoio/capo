@@ -50,5 +50,3 @@ class Recipes
     recipes
   end
 end
-
-puts Recipes.load.inspect
