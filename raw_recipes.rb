@@ -3,7 +3,7 @@
 
 require 'yaml'
 
-class Recipe
+class RawRecipe
   attr_accessor :name
   attr_accessor :attributes_hash
 
