@@ -1,11 +1,3 @@
-configs do
-  description 'Default svn settings'
-  version 0.1
-  tags %w[svn scm]
-  category 'defaults'
-  dependencies %w[]
-end
-
 set :scm, :svn
 
 # Asks for a password for your repository but authentication via ssh is recmmended

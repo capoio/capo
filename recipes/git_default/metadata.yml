@@ -1,0 +1,6 @@
+description: Default Git settings
+version: 0.2
+tags:
+  - git
+  - scm
+dependencies: []

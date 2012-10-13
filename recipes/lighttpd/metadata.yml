@@ -1,0 +1,7 @@
+description: 'Lighttdp settings'
+version: 0.1
+tags:
+  - rails
+  - server
+  - lighttpd
+dependencies: []

@@ -1,11 +1,3 @@
-configs do
-  description 'Detect if rails migrations need to run'
-  version 0.1
-  tags %w[rails database migration]
-  category 'rails'
-  dependencies %w[]
-end
-
 desc 'Prompts if new migrations are available and runs them if you want to'
   namespace :deploy do
     task :needs_migrations, :roles => :db, :only => {:primary => true} do

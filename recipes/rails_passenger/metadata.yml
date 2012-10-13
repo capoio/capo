@@ -1,0 +1,6 @@
+description: Passenger actions
+version: 0.2
+tags:
+  - rails
+  - passenger
+dependencies: []

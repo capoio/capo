@@ -1,0 +1,8 @@
+description: Default Rails environment configs actions this will create a shared config folder and symlinks files after deploy
+version: 0.1
+tags:
+  - rails
+  - config
+  - shared
+  - symlinks
+dependencies: []

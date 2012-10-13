@@ -1,0 +1,6 @@
+description: Default svn settings
+version: 0.1
+tags:
+  - svn
+  - scm
+dependencies: []

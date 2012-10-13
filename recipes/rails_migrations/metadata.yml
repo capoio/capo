@@ -1,0 +1,7 @@
+description: Detect if rails migrations need to run
+version: 0.1
+tags:
+  - rails
+  - database
+  - migration
+dependencies: []

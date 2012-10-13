@@ -1,11 +1,3 @@
-configs do
-  description 'Default capistrano settings.'
-  version 0.1
-  tags %w[capistrano default configs]
-  category 'defaults'
-  dependencies %w[]
-end
-
 # Set the user of your application
 set :user, 'account_user'
 

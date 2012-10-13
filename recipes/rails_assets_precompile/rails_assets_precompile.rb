@@ -1,11 +1,3 @@
-configs do
-  description 'Compile rails3+ assets'
-  version 0.1
-  tags %w[rails assets]
-  category 'rails'
-  dependencies %w[bundler]
-end
-
 namespace :deploy do
   namespace :assets do
     task :precompile, :roles => :web, :except => {:no_release => true} do

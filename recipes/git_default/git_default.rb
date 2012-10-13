@@ -1,11 +1,3 @@
-configs do
-  description 'Default Git settings'
-  version 0.2
-  tags %w[git scm]
-  category 'defaults'
-  dependencies %w[]
-end
-
 set :scm, :git
 
 # Enable submodule to be updated

@@ -1,0 +1,5 @@
+description: Tail the environment logs
+version: 0.1
+tags:
+  - defaults
+dependencies: []

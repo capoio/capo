@@ -1,0 +1,7 @@
+description: Default capistrano settings.
+version: 0.1
+tags:
+  - capistrano
+  - default
+  - configs
+dependencies: []

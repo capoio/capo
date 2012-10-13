@@ -1,0 +1,7 @@
+description: Compile rails3+ assets
+version: 0.1
+tags:
+  - rails
+  - assets
+dependencies:
+  - bundler

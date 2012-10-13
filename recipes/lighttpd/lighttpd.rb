@@ -1,11 +1,3 @@
-configs do
-  description 'Lighttdp settings'
-  version 0.1
-  tags %w[rails server lighttpd]
-  category 'rails'
-  dependencies %w[]
-end
-
 # Lighttpd stuff
   namespace :lighttpd do
     desc 'Restart the web server'

@@ -1,11 +1,3 @@
-configs do
-  description 'Default Rails environment configs actions, this will create a shared config folder and symlinks files after deploy'
-  version 0.1
-  tags %w[rails config shared symlinks]
-  category 'rails'
-  dependencies %w[]
-end
-
 unless exists?(:configs)
   set :configs, [:database]
 end

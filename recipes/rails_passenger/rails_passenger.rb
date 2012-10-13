@@ -1,11 +1,3 @@
-configs do
-  description 'Passenger actions'
-  version 0.2
-  tags %w[rails passenger]
-  category 'rails'
-  dependencies %w[]
-end
-
 namespace :passenger do
   desc 'Restart the web server'
   task :restart, :roles => :app do
