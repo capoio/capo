@@ -1,7 +1,8 @@
 configs do
   description 'Default Git settings'
-  version 0.1
-  tags %w[git default]
+  version 0.2
+  tags %w[git]
+  category 'defaults'
   dependencies %w[]
 end
 
