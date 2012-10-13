@@ -1,5 +1,5 @@
 # Usage: Recipe.load_all
-# This will return a hash of all the recipes with their metadata
+# This will return a hash of all recipes with their metadata
 
 class Recipe
   attr_accessor :name
