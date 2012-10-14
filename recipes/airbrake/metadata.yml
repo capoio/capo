@@ -1,0 +1,6 @@
+description: Use airbrake
+version: 0.1
+tags:
+  - airbrake
+  - gem
+dependencies: []
