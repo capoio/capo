@@ -1,0 +1,6 @@
+description: 'Railsless Deploy for Capistrano'
+version: 0.1
+tags:
+  - capistrano
+  - deploy
+dependencies: []
