@@ -1,4 +1,10 @@
+##################################################
+###### Begin sets
+
 set :whenever_command, "bundle exec whenever"
+
+###### End sets
+##################################################
 
 begin
   require 'whenever'

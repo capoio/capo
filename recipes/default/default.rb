@@ -1,3 +1,6 @@
+##################################################
+###### Begin sets
+
 # Set the user of your application
 set :user, 'account_user'
 
@@ -18,11 +21,14 @@ set :group_writable, false
 
 set :deploy_via, :remote_cache
 
-# Must be set for the password prompt from git to work
-default_run_options[:pty] = true
-
 # Where do you want to deploy
 set(:deploy_to) {"/home/#{user}/apps/#{application}"}
+
+###### End sets
+##################################################
+
+# Must be set for the password prompt from git to work
+default_run_options[:pty] = true
 
 # Default action to clean older versions
 after :deploy, 'deploy:cleanup'

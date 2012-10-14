@@ -1,3 +1,9 @@
+##################################################
+###### Begin sets
+
+###### End sets
+##################################################
+
 begin
   require 'railsless-deploy'
 rescue LoadError => e

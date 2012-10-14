@@ -1,5 +1,11 @@
+##################################################
+###### Begin sets
+
 set :drush_cmd, 'drush_cmd'
 set :app_path, 'app_path'
+
+###### End sets
+##################################################
 
 namespace :drush do
 

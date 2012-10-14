@@ -1,3 +1,6 @@
+##################################################
+###### Begin sets
+
 set :scm, :git
 
 # Enable submodule to be updated
@@ -11,3 +14,6 @@ set :git_shallow_clone, 1
 
 # Set password for scm, using ssh key is recommended
 # set :scm_passphrase, "p@ssw0rd"  # The deploy user's password
+
+###### End sets
+##################################################

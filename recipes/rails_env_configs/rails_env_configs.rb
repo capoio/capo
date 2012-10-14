@@ -1,6 +1,12 @@
+##################################################
+###### Begin sets
+
 unless exists?(:configs)
   set :configs, [:database]
 end
+
+###### End sets
+##################################################
 
 namespace :configs do
   configs.each do |name|

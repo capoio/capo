@@ -1,3 +1,9 @@
+##################################################
+###### Begin sets
+
+###### End sets
+##################################################
+
 desc "Download a backup of the database(s) from the given stage."
 task :download_db, :roles => :db, :only => { :primary => true } do
   domains.each do |domain|

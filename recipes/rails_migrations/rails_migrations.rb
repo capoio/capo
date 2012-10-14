@@ -1,3 +1,9 @@
+##################################################
+###### Begin sets
+
+###### End sets
+##################################################
+
 desc 'Prompts if new migrations are available and runs them if you want to'
 namespace :deploy do
   task :needs_migrations, :roles => :db, :only => {:primary => true} do

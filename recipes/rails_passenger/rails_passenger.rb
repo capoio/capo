@@ -1,3 +1,9 @@
+##################################################
+###### Begin sets
+
+###### End sets
+##################################################
+
 namespace :passenger do
   desc 'Restart the web server'
   task :restart, :roles => :app do

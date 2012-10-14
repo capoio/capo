@@ -1,3 +1,6 @@
+##################################################
+###### Begin sets
+
 # List the Drupal multi-site folders.  Use "default" if no multi-sites are installed.
 set :domains, ["default"]
 
@@ -17,6 +20,8 @@ role :db, "devel.example.com", :primary => true
 # The path to drush
 set :drush, "cd #{current_path} ; /usr/bin/php /data/lib/php/drush/drush.php"
 
+###### End sets
+##################################################
 
 namespace :deploy do
 
