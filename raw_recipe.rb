@@ -5,6 +5,7 @@ class RawRecipe
   attr_accessor :name
   attr_accessor :metadata
   attr_accessor :code
+  attr_accessor :variables
 
   def initialize name
     self.name = name
@@ -18,7 +19,7 @@ class RawRecipe
 
   def to_hash
     parse
-    attributes_hash = {:name => name, :code => code}
+    attributes_hash = {:name => name, :code => code, :variables => variables}
     metadata.each_pair{|k, v| attributes_hash[k] = v}
     attributes_hash
   end
@@ -40,6 +41,16 @@ class RawRecipe
 
   def parse_code
     File.read code_path
+  end
+
+  def parse_variables
+    raise 'Needs code to parse variables' if code.nil?
+    variables = {}
+    matched_variables = code.scan /set +\(?:(\w+)\)?, +'?"?:?(\w+)'?"?/
+    matched_variables.each do |match_data|
+      variables[match_data[0]] = match_data[1]
+    end
+    variables
   end
 
   def metadata_path
