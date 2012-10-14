@@ -1,0 +1,11 @@
+description: Download a backup of the database(s) from the given stage.
+version: 0.1
+tags:
+  - drupal
+  - mysql
+  - drush
+  - capistrano
+  - default
+  - configs
+dependencies:
+  - drupal_default
