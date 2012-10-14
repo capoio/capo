@@ -1,6 +1,8 @@
 # Usage: RawRecipe.load_all
 # This will return a hash of all recipes with their metadata
 
+require 'yaml'
+
 class RawRecipe
   attr_accessor :name
   attr_accessor :metadata
