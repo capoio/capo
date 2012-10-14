@@ -6,6 +6,8 @@ class RawRecipe
   attr_accessor :metadata
   attr_accessor :code
   attr_accessor :variables
+  attr_accessor :code_block
+  attr_accessor :settings_block
 
   def initialize name
     self.name = name
@@ -15,12 +17,14 @@ class RawRecipe
     self.metadata = parse_metadata
     self.code = parse_code
     self.variables = parse_variables
+    self.code_block = parse_code_block
+    self.settings_block = parse_settings_block
     self
   end
 
   def to_hash
     parse
-    attributes_hash = {:name => name, :code => code, :variables => variables}
+    attributes_hash = {:name => name, :code => code, :variables => variables, code_block: code_block, settings_block: settings_block}
     metadata.each_pair{|k, v| attributes_hash[k] = v}
     attributes_hash
   end
@@ -56,6 +60,14 @@ class RawRecipe
 
   def metadata_path
     path 'metadata.yml'
+  end
+
+  def parse_code_block
+    code.match(/###### End sets.+#+(.*)/mi)[1]
+  end
+
+  def parse_settings_block
+    code.match(/###### Begin sets(.*)###### End sets/mi)[1]
   end
 
   def code_path
