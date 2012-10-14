@@ -1,0 +1,10 @@
+description: Drupal drush.
+version: 0.1
+tags:
+  - drush
+  - drupal
+  - capistrano
+  - default
+  - configs
+dependencies:
+  - drupal_default
