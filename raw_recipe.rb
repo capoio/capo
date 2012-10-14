@@ -1,7 +1,7 @@
-# Usage: Recipe.load_all
+# Usage: RawRecipe.load_all
 # This will return a hash of all recipes with their metadata
 
-class Recipe
+class RawRecipe
   attr_accessor :name
   attr_accessor :attributes_hash
 
@@ -19,8 +19,8 @@ class Recipe
 
   def self.load_all
     recipes = []
-    Dir['recipes/*'].each do |folder|
-      name = folder.match(/^recipes\/(\w+)$/)[1]
+    Dir["#{File.dirname __FILE__}/recipes/*"].each do |folder|
+      name = folder.match(/recipes\/(\w+)$/)[1]
       recipes << new(name).to_hash
     end
     recipes
@@ -48,6 +48,6 @@ class Recipe
   end
 
   def path file
-   File.join File.dirname($0), "recipes/#{name}/#{file}"
+   File.join File.dirname(__FILE__), "recipes/#{name}/#{file}"
   end
 end
