@@ -1,0 +1,6 @@
+description: 'Adds support for Puma Rack Server'
+version: 0.1
+tags:
+  - capistrano
+  - deploy
+dependencies: []
