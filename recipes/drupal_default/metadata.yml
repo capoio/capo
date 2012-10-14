@@ -1,0 +1,9 @@
+description: Drupal capistrano settings.
+version: 0.1
+tags:
+  - drupal
+  - capistrano
+  - default
+  - configs
+dependencies:
+  - default
