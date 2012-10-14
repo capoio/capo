@@ -7,5 +7,5 @@
 begin
   require 'airbrake/capistrano'
 rescue LoadError => e
-  raise "\nairbrake gem not found. Please install it with '(sudo) gem install airbrake'."
+  raise "\nairbrake gem not found. Please install it with '(sudo) gem install airbrake' or add it to your Gemfile if you are using bundler."
 end
