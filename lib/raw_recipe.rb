@@ -27,7 +27,7 @@ class RawRecipe
 
   def self.load_all
     recipes = []
-    Dir["#{File.dirname __FILE__}/recipes/*"].each do |folder|
+    Dir["#{File.dirname __FILE__}/../recipes/*"].each do |folder|
       name = folder.match(/recipes\/(\w+)$/)[1]
       recipes << new(name).to_hash
     end
@@ -63,6 +63,6 @@ class RawRecipe
   end
 
   def path file
-   File.join File.dirname(__FILE__), "recipes/#{name}/#{file}"
+   File.join File.dirname(__FILE__), "../recipes/#{name}/#{file}"
   end
 end
