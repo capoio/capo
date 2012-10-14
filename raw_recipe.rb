@@ -3,17 +3,23 @@
 
 class RawRecipe
   attr_accessor :name
-  attr_accessor :attributes_hash
+  attr_accessor :metadata
+  attr_accessor :code
 
   def initialize name
-    self.attributes_hash = {}
     self.name = name
   end
 
+  def parse
+    self.metadata = parse_metadata
+    self.code = parse_code
+    self
+  end
+
   def to_hash
-    attributes_hash[:name] = name
-    parse_metadata
-    load_code
+    parse
+    attributes_hash = {:name => name, :code => code}
+    metadata.each_pair{|k, v| attributes_hash[k] = v}
     attributes_hash
   end
 
@@ -28,15 +34,12 @@ class RawRecipe
 
   private
   def parse_metadata
-    metadata = YAML.load File.read(metadata_path)
-    metadata.each_pair do |name, value|
-      attributes_hash[name.to_sym] = value
-    end
+    metadata_hash = YAML.load File.read metadata_path
+    metadata_hash.inject({}){|h, (k, v)| h[k.to_sym] = v; h} # symbolize keys
   end
 
-  def load_code
-    code = File.read(code_path)
-    attributes_hash[:code] = code
+  def parse_code
+    File.read code_path
   end
 
   def metadata_path
