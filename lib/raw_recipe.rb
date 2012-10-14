@@ -63,7 +63,7 @@ class RawRecipe
   end
 
   def parse_code_block
-    code.match(/###### End sets.+#+(.*)/mi)[1]
+    code.match(/###### End sets.+##################################################(.*)/mi)[1]
   end
 
   def parse_settings_block
