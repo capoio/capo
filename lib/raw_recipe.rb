@@ -66,7 +66,3 @@ class RawRecipe
    File.join File.dirname(__FILE__), "recipes/#{name}/#{file}"
   end
 end
-
-puts `ruby -v`
-puts RawRecipe.new('default').parse.variables.inspect
-puts RawRecipe.load_all.to_yaml
