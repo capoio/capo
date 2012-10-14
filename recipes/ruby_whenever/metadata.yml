@@ -1,0 +1,6 @@
+description: 'Adds support for Ruby gem Whenever'
+version: 0.1
+tags:
+  - capistrano
+  - deploy
+dependencies: []
