@@ -4,7 +4,7 @@
 
 Capo is an easy way to build and manage your Capfile.
 
-You might want to head over to [Capo.io](http://capo.io) to generate your `Gemfile` or have a look at the [capo gem](https://github.com/capoio/capo).
+You might want to head over to [Capo.io](http://capo.io) to generate your `Gemfile` or have a look at the [capo gem](https://github.com/capoio/capo-gem).
 
 ## About
 
