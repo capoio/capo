@@ -1,4 +1,4 @@
-description: Compile rails3+ assets
+description: Compile Rails 3.1 (or higher) assets. Only compile them if changes are found.
 version: 0.1
 tags:
   - rails
