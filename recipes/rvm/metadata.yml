@@ -1,0 +1,6 @@
+description: 'Adds support for rvm on your deployment target'
+version: 0.1
+tags:
+  - rvm
+  - capistrano
+dependencies: []
