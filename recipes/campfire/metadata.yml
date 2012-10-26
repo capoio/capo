@@ -1,0 +1,6 @@
+description: Post a message to a speficied Campfire room
+version: 0.1
+tags:
+  - campfire
+  - gem
+dependencies: []

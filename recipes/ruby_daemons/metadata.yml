@@ -1,0 +1,6 @@
+description: "Start, stop and restart daemons configured with the daemons gem"
+version: 0.1
+tags:
+  - daemon
+  - ruby
+dependencies: []

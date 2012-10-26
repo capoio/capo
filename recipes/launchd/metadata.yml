@@ -1,0 +1,7 @@
+description: "Start, stop and restart Mac OS X launchd agents"
+version: 0.1
+tags:
+  - launchd
+  - mac
+  - osx
+dependencies: []
