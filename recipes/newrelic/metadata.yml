@@ -1,0 +1,5 @@
+description: Adds newrelic support
+version: 0.2
+tags:
+  - newrelic
+dependencies: []
