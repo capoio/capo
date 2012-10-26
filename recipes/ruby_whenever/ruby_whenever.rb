@@ -8,6 +8,6 @@ set :whenever_command, "bundle exec whenever"
 
 begin
   require 'whenever/capistrano'
-rescue LoadError => e
+rescue LoadError
   raise "\nwhenever gem not found. Either install it with '(sudo) gem install whenever' or add it to your Gemfile if you are using bundler."
 end

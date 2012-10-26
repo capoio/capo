@@ -2,7 +2,7 @@
 ###### Begin sets
 begin
   require 'capistrano/campfire'
-rescue LoadError => e
+rescue LoadError
   raise "\ncapistrano-campfire gem not found. Please install it with '(sudo) gem install capistrano-campfire' or add it to your Gemfile if you are using bundler."
 end
 
