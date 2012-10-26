@@ -1,12 +1,7 @@
 begin
   require 'new_relic/recipes'
 rescue LoadError
-  $stderr.puts <<INSTALL
-You need the newrelic gem to deploy this application
-Install the gem like this:
-  gem install newrelic
-INSTALL
-  exit 1
+  raise "\newrelic gem not found. Please install it with '(sudo) gem install newrelic'."
 end
 
 
