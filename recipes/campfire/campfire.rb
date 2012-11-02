@@ -15,7 +15,7 @@ namespace :campfire do
   task :deploy, :except => { :no_release => true } do
     rails_env = fetch(:rails_env, "production")
     local_user = ENV['USER'] || ENV['USERNAME']
-    campfire_room.speak "Hooray, #{local_user} deployed #{application.capitalize} to #{rails_env} commit:#{current_revision[0..5]}"
+    campfire_room.speak "Hooray, #{local_user} deployed #{application.capitalize} to #{rails_env} commit: #{current_revision[0..5]}"
   end
 end
 
