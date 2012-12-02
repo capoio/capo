@@ -1,0 +1,6 @@
+description: "Generate the static files of a static Jekyll site."
+version: 0.1
+tags:
+  - jekyll
+  - static
+dependencies: []
