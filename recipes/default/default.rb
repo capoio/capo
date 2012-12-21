@@ -22,7 +22,7 @@ set :group_writable, false
 set :deploy_via, :remote_cache
 
 # Where do you want to deploy
-set(:deploy_to) {"/home/#{user}/apps/#{application}"}
+set :deploy_to, "home/#{user}/apps/#{application}"
 
 ###### End sets
 ##################################################
