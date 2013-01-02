@@ -4,7 +4,7 @@
 ###### End sets
 ##################################################
 
-before 'deploy:update', 'deploy:update_jekyll'
+after 'deploy:update', 'deploy:update_jekyll'
 
 namespace :deploy do
 
@@ -15,7 +15,9 @@ namespace :deploy do
 
   desc 'Run jekyll to update site before uploading'
   task :update_jekyll do
-    %x(rm -rf _site/* && jekyll)
+    # This will just generate the statis files, this will NOT start a jekyll server.
+    # The utf-8 is to make sure you can use special characters in your files.
+    run "cd #{latest_release} && LC_ALL='en_US.UTF-8' jekyll --no-auto"
   end
 
 end
