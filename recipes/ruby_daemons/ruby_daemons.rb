@@ -8,19 +8,23 @@ end
 ###### End sets
 ##################################################
 
-daemons.each do |daemon|
-  namespace daemon do
-    %w[start stop status].each do |command|
-      desc "#{daemon.capitalize}::#{command.capitalize}"
-      task command, :roles => [:app] do
-        run "cd #{current_path};RAILS_ENV=#{rails_env} bundle exec script/#{daemon}_daemon #{command}"
-      end
-    end
+daemons_per_role = daemons.is_a?(Array) ? {:app => daemons} : daemons
 
-    desc "#{daemon.capitalize}::Restart"
-    task :restart, :roles => [:app] do
-      send(daemon).stop
-      send(daemon).start
+daemons_per_role.each do |role, daemons|
+  daemons.each do |daemon|
+    namespace daemon do
+      %w[start stop status].each do |command|
+        desc "#{daemon.capitalize}::#{command.capitalize}"
+        task command, :roles => [role] do
+          run "cd #{current_path};RAILS_ENV=#{rails_env} bundle exec script/#{daemon}_daemon #{command}"
+        end
+      end
+
+      desc "#{daemon.capitalize}::Restart"
+      task :restart, :roles => [role] do
+        send(daemon).stop
+        send(daemon).start
+      end
     end
   end
 end
