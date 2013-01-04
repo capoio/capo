@@ -10,25 +10,17 @@ end
 
 daemons.each do |daemon|
   namespace daemon do
-    desc "#{daemon.capitalize}::Start"
-    task :start, :roles => [:app] do
-      run "cd #{current_path};RAILS_ENV=#{rails_env} bundle exec script/#{daemon}_daemon start"
-    end
-
-    desc "#{daemon.capitalize}::Stop"
-    task :stop, :roles => [:app] do
-      run "cd #{current_path};RAILS_ENV=#{rails_env} bundle exec script/#{daemon}_daemon stop"
+    %w[start stop status].each do |command|
+      desc "#{daemon.capitalize}::#{command.capitalize}"
+      task command, :roles => [:app] do
+        run "cd #{current_path};RAILS_ENV=#{rails_env} bundle exec script/#{daemon}_daemon #{command}"
+      end
     end
 
     desc "#{daemon.capitalize}::Restart"
     task :restart, :roles => [:app] do
       send(daemon).stop
       send(daemon).start
-    end
-
-    desc "#{daemon.capitalize}::Status"
-    task :status, :roles => [:app] do
-      run "cd #{current_path};RAILS_ENV=#{rails_env} bundle exec script/#{daemon}_daemon status"
     end
   end
 end
