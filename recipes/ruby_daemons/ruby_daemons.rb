@@ -9,7 +9,7 @@ end
 ##################################################
 
 daemons.each do |daemon|
-  namespace :mailman do
+  namespace daemon do
     desc "#{daemon.capitalize}::Start"
     task :start, :roles => [:app] do
       run "cd #{current_path};RAILS_ENV=#{rails_env} bundle exec script/#{daemon}_daemon start"
