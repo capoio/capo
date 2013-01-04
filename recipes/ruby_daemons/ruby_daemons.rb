@@ -22,8 +22,8 @@ daemons.each do |daemon|
 
     desc "#{daemon.capitalize}::Restart"
     task :restart, :roles => [:app] do
-      mailman.stop
-      mailman.start
+      send(daemon).stop
+      send(daemon).start
     end
 
     desc "#{daemon.capitalize}::Status"
