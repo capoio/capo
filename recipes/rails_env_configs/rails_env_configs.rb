@@ -29,6 +29,6 @@ namespace :configs do
     end
 
     after 'deploy:setup', "configs:#{name}:copy"
-    after 'deploy:create_symlink', "configs:#{name}:link"
+    after 'deploy:finalize_update', "configs:#{name}:link"
   end
 end
