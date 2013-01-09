@@ -26,7 +26,7 @@ class RawRecipe
 
   def to_hash
     parse
-    attributes_hash = {:name => name, :code => code, :variables => variables, code_block: code_block, settings_block: settings_block}
+    attributes_hash = {:name => name, :code => code, :variables => variables, :code_block => code_block, :settings_block => settings_block}
     metadata.each_pair{|k, v| attributes_hash[k] = v}
     attributes_hash
   end
