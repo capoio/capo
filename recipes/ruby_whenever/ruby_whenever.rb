@@ -1,7 +1,7 @@
 ##################################################
 ###### Begin sets
 
-set :whenever_command, "bundle exec whenever"
+set :whenever_command, "#{bundle_cmd} exec whenever"
 
 ###### End sets
 ##################################################
