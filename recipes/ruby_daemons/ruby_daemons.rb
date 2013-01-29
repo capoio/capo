@@ -1,9 +1,7 @@
 ##################################################
 ###### Begin sets
 
-unless exists?(:daemons)
-  set :daemons, [:dameon_name]
-end
+_cset :daemons, [:dameon_name]
 
 ###### End sets
 ##################################################

@@ -1,9 +1,7 @@
 ##################################################
 ###### Begin sets
 
-unless exists?(:configs)
-  set :configs, [:database]
-end
+_cset :configs, [:database]
 
 ###### End sets
 ##################################################
