@@ -1,0 +1,6 @@
+description: Post a message to a speficied HipChat room
+version: 0.1
+tags:
+  - hipchat
+  - gem
+dependencies: []
