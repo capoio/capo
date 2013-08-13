@@ -3,5 +3,4 @@ version: 0.2
 tags:
   - capistrano
   - deploy
-dependencies:
-  - default
+dependencies: []
