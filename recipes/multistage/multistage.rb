@@ -1,3 +1,9 @@
+##################################################
+###### Begin sets
+
+###### End sets
+##################################################
+
 location = fetch :stage_dir, 'config/deploy/stages'
 
 unless exists?(:stages)
