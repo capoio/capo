@@ -1,0 +1,5 @@
+description: Support for multiple stages
+version: 0.1
+tags:
+  - newrelic
+dependencies: []
