@@ -14,10 +14,7 @@ namespace :configs do
         run "mkdir -p #{shared_path}/config"
 
         config = YAML.load_file(%Q{./config/#{name}.yml})[rails_env.to_s]
-        file = "#{rails_env.to_s}:\n"
-        file << config.map{|key, value| "  #{key}: #{value}\n"}.join
-
-        put file, "#{shared_path}/config/#{name}.yml"
+        put {rails_env => config}.to_yaml, "#{shared_path}/config/#{name}.yml"
       end
 
       desc "Link the #{name}.yml"
